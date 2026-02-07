@@ -1,0 +1,645 @@
+body {
+  background: #0b0e11;
+  font-family: Inter, system-ui, sans-serif;
+  color: #eaecef;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 24px 0;
+}
+
+.card {
+  width: 380px;
+  max-width: 92vw;
+  background: #111827;
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.7);
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header img {
+  width: 36px;
+}
+
+.sub {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 14px 0 18px;
+}
+
+/* BUTTONS */
+button {
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#connectBtn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg,#14f195,#00c2ff);
+  color: #000;
+}
+
+/* SEARCH */
+.search {
+  display: flex;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.search input {
+  flex: 1;
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  padding: 10px;
+  color: #eaecef;
+}
+
+.search button {
+  padding: 10px 14px;
+  background: #1f2937;
+  color: #eaecef;
+}
+
+/* TOKEN RESULT */
+.token {
+  margin-top: 12px;
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 13px;
+}
+
+.token strong {
+  color: #60a5fa;
+}
+
+/* DONATIONS */
+.donations {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.bag {
+  flex: 1;
+  padding: 12px;
+  background: #020617;
+  color: #eaecef;
+  border: 1px solid #1f2937;
+}
+
+.bag:hover {
+  border-color: #14f195;
+}
+
+/* CUSTOM */
+.custom {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.custom input {
+  flex: 1;
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  padding: 10px;
+  color: #eaecef;
+}
+
+.primary {
+  padding: 10px 14px;
+  background: linear-gradient(135deg,#14f195,#00c2ff);
+  color: #000;
+  font-weight: 700;
+}
+
+/* INFO */
+.wallet {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #34d399;
+}
+
+.balance {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #60a5fa;
+}
+
+.address {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.address code {
+  display: block;
+  margin-top: 6px;
+  background: #020617;
+  padding: 8px;
+  border-radius: 6px;
+  word-break: break-all;
+}
+
+.status {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.hidden {
+  display: none;
+}
+
+  /* PAGE WRAPPER */
+.page {
+  width: 100%;
+}
+
+/* CENTER ALL MAIN SECTIONS */
+.search-section,
+.token-section,
+.donation-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* SEARCH FIX */
+.search-section {
+  display: flex;
+  gap: 12px;
+}
+
+.search-section input {
+  flex: 1;
+}
+
+/* DONATION FIX */
+.donation-section {
+  text-align: center;
+}
+
+donations {
+  justify-content: center;
+}
+
+/* BUTTON NORMALIZATION */
+button {
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* FIX LOGO SIZE */
+.logo img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+/* HEADER FIX */
+.topbar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  font-size: 16px;
+  font-weight: 700;
+}
+/* PUSH CONTENT BELOW HEADER */
+.search-section {
+  margin-top: 20px;
+}/* ===============================
+   SOLSCAN-STYLE COLOR SYSTEM
+================================ */
+
+:root {
+  --bg-main: #0b0e11;
+  --bg-panel: #111827;
+  --bg-panel-light: #1f2937;
+  --border: #2a2f3a;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --accent: #14f195;
+  --accent-blue: #3b82f6;
+}
+
+/* ===============================
+   APP BACKGROUND
+================================ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+.topbar {
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.logo img {
+  width: 28px;
+  height: 28px;
+}
+
+/* ===============================
+   MAIN CONTENT WIDTH
+================================ */
+
+.search-section,
+.token-section,
+.donation-section {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 20px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+/* ===============================
+   SEARCH BAR
+================================ */
+
+.search-section {
+  display: flex;
+  gap: 12px;
+}
+
+.search-section input {
+  flex: 1;
+  background: var(--bg-panel-light);
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: 10px;
+  color: var(--text-main);
+  font-size: 15px;
+}
+
+.search-section button {
+  padding: 14px 22px;
+  background: var(--accent-blue);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+/* ===============================
+   TOKEN INFO (SOLSCAN FEEL)
+================================ */
+
+token-section div strong {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+token-section div {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+/* ===============================
+   DONATION SECTION
+================================ */
+
+donation-section {
+  text-align: center;
+}
+
+#connectBtn {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 14px;
+  background: linear-gradient(135deg, #14f195, #00c2ff);
+  border: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+}
+
+donations {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+donations button {
+  background: var(--bg-panel-light);
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  border-radius: 10px;
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+#customAmount {
+  width: 100%;
+  max-width: 280px;
+  margin: 10px auto;
+  padding: 12px;
+  background: var(--bg-panel-light);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-main);
+}
+
+/* ===============================
+   FOOTER
+================================ */
+.footer {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+/* DASHBOARD GRID */
+.dashboard {
+  max-width: 1100px;
+  margin: 24px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.card.wide {
+  grid-column: span 2;
+}
+
+.label {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.value {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sub {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}.section {
+  max-width: 1100px;
+  margin: 48px auto;
+  padding: 24px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.section h2 {
+  margin-bottom: 16px;
+}
+
+.chart-box {
+  height: 260px;
+  background: var(--bg-panel-light);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.epoch-progress .label {
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #1f2937;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #14f195, #00c2ff);
+}.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.table th {
+  color: var(--text-muted);
+}/* ===============================
+   SOLSCAN COLOR RESTORE
+================================ */
+
+:root {
+  --bg-main: #0b0e11;
+  --bg-panel: #0f131a;
+  --bg-panel-light: #151a23;
+  --border: #1f2937;
+
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  --accent-green: #14f195;
+  --accent-blue: #00c2ff;
+  --accent-purple: #7c7cff;
+}
+
+/* APP BACKGROUND */
+hml, body {
+  background: radial-gradient(
+    circle at top,
+    #0f172a 0%,
+    #020617 60%
+  );
+  color: var(--text-main);
+}
+
+/* HEADER */
+.header,
+.topbar {
+  background: linear-gradient(
+    180deg,
+    #0f172a 0%,
+    #020617 100%
+  );
+  border-bottom: 1px solid var(--border);
+}
+
+/* HERO */
+.hero h1 span {
+  background: linear-gradient(
+    90deg,
+    var(--accent-green),
+    var(--accent-blue)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* CARDS */
+.card,
+.section,
+.stats .card {
+  background: linear-gradient(
+    180deg,
+    #0f172a 0%,
+    #020617 100%
+  );
+  border: 1px solid var(--border);
+  box-shadow: 0 0 0 1px rgba(20,241,149,0.02),
+              0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* CARD VALUES */
+.value {
+  background: linear-gradient(
+    90deg,
+    var(--accent-green),
+    var(--accent-blue)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SEARCH */
+.search input {
+  background: #020617;
+  border: 1px solid #1f2937;
+}
+
+.search button {
+  background: linear-gradient(
+    135deg,
+    var(--accent-green),
+    var(--accent-blue)
+  );
+  color: #020617;
+  font-weight: 700;
+}
+
+/* TABLES */
+.table thead {
+  background: #020617;
+}
+
+.table th {
+  color: var(--text-muted);
+}
+
+.table tr:hover td {
+  background: rgba(20,241,149,0.04);
+}
+
+/* CHART PLACEHOLDER */
+.chart-placeholder {
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(20,241,149,0.15),
+      transparent 60%
+    ),
+    #020617;
+  border: 1px dashed rgba(20,241,149,0.4);
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  background: #020617;
+}
+
+.progress-fill {
+  background: linear-gradient(
+    90deg,
+    var(--accent-green),
+    var(--accent-blue),
+    var(--accent-purple)
+  );
+}
+
+/* DONATION BUTTON */
+.wallet-btn,
+.send-btn {
+  background: linear-gradient(
+    135deg,
+    var(--accent-green),
+    var(--accent-blue)
+  );
+  color: #020617;
+  font-weight: 800;
+}
+
+/* FOOTER */
+.footer {
+  background: linear-gradient(
+    180deg,
+    #020617,
+    #000
+  );
+  border-top: 1px solid var(--border);
+}/* FIX DONATION BUTTONS NOT CLICKABLE */
+.donation {
+  position: relative;
+  z-index: 10;
+}
+
+donation * {
+  pointer-events: auto;
+}
